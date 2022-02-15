@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activites.HelpSection">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/helpSectionText"
+        android:text="@string/help_section"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:textSize="20sp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/helpSectionText"
+        android:id="@+id/returnToLoginPageButton"
+        android:layout_centerHorizontal="true"
+        android:text="@string/return_to_login_page"
+        android:onClick="onReturnToLoginPage"
+        android:layout_marginTop="350dp"/>
+
+</RelativeLayout>
