@@ -22,6 +22,6 @@
         android:layout_centerHorizontal="true"
         android:onClick="onHome"
         android:contentDescription="@string/home_button"
-        app:srcCompat="@drawable/home" />
+        app:srcCompat="@drawable/ic_home_black_24dp" />
 
 </RelativeLayout>
