@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PainManagementPhysicianSide">
         <activity
+            android:name=".activites.PatientSummary"
+            android:exported="false" />
+        <activity
             android:name=".activites.Patients"
             android:exported="false" />
         <activity
