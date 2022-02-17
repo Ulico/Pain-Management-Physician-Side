@@ -15,37 +15,37 @@
         app:srcCompat="@drawable/logo" />
 
     <TextView
+        android:id="@+id/selectPatientNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/select_patient_name"
-        android:id="@+id/selectPatientNameText"
+        android:layout_below="@id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/imageView"/>
+        android:text="@string/select_patient_name" />
 
     <EditText
+        android:id="@+id/patientEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/type_patient_name"
-        android:id="@+id/patientEditText"
         android:layout_below="@id/selectPatientNameText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:autofillHints="name" />
+        android:autofillHints="name"
+        android:hint="@string/type_patient_name" />
 
     <ListView
+        android:id="@+id/patientList"
         android:layout_width="250dp"
         android:layout_height="300dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/patientList"
         android:layout_below="@id/patientEditText"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
         android:contentDescription="@string/home_button"
         android:onClick="onHome"
         app:srcCompat="@drawable/ic_home_black_24dp" />

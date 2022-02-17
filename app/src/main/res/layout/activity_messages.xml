@@ -14,14 +14,15 @@
         android:layout_marginTop="80dp"
         android:text="@string/messages_go_here"
         android:textSize="20sp" />
+
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
         android:layout_centerHorizontal="true"
-        android:onClick="onHome"
+        android:layout_marginBottom="50dp"
         android:contentDescription="@string/home_button"
+        android:onClick="onHome"
         app:srcCompat="@drawable/ic_home_black_24dp" />
 
 </RelativeLayout>
