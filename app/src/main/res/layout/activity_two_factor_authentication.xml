@@ -10,39 +10,40 @@
         android:id="@+id/imageView"
         android:layout_width="148dp"
         android:layout_height="170dp"
-        android:contentDescription="@string/logo"
         android:layout_centerHorizontal="true"
+        android:contentDescription="@string/logo"
         app:srcCompat="@drawable/logo" />
 
     <TextView
+        android:id="@+id/enterPinText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/enterPinText"
-        android:text="@string/enter_security_pin"
+        android:layout_below="@id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/imageView"/>
+        android:text="@string/enter_security_pin" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:width="100dp"
-        android:layout_height="wrap_content"
-        android:inputType="numberPassword"
-        android:hint="@string/pin"
-        android:layout_below="@id/enterPinText"
         android:id="@+id/pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enterPinText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:autofillHints="password"/>
+        android:width="100dp"
+        android:autofillHints="password"
+        android:hint="@string/pin"
+        android:inputType="numberPassword"
+        android:maxLength="6" />
 
     <Button
+        android:id="@+id/enterPin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/enterPin"
-        android:text="@string/enter"
-        android:onClick="onPinEnter"
         android:layout_below="@id/pin"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp"
+        android:onClick="onPinEnter"
+        android:text="@string/enter" />
 
 
 </RelativeLayout>
