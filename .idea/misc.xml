@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/adria/AndroidStudioProjects/Pain-Management-Physician-Side/app/src/main/res/layout/activity_help_section.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/Pain-Management-Physician-Side/app/src/main/res/layout/activity_homescreen.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/Pain-Management-Physician-Side/app/src/main/res/layout/activity_main.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/Pain-Management-Physician-Side/app/src/main/res/layout/activity_messages.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/Pain-Management-Physician-Side/app/src/main/res/layout/activity_patient_summary.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/Pain-Management-Physician-Side/app/src/main/res/layout/activity_patients.xml" value="0.17255434782608695" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/PainManagementPhysicianSide/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.2995" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/PainManagementPhysicianSide/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.2995" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/PainManagementPhysicianSide/app/src/main/res/layout/activity_help_section.xml" value="0.3605072463768116" />
