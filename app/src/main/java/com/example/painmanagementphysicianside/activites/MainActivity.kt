@@ -1,10 +1,11 @@
 package com.example.painmanagementphysicianside.activites
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.painmanagementphysicianside.R
+import androidx.appcompat.app.AppCompatActivity
+import com.example.painmanagementphysicianside.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
 import io.realm.Realm
 import io.realm.mongodb.App
 import io.realm.mongodb.AppConfiguration
@@ -12,33 +13,50 @@ import io.realm.mongodb.Credentials
 import io.realm.mongodb.User
 
 lateinit var taskApp: App
+const val appID = "test_app-svywj"
+
 class MainActivity : AppCompatActivity() {
-    val appID = "test_app-svywj"
+
     var user: User? = null
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+
         Realm.init(this)
         taskApp = App(
             AppConfiguration.Builder(appID)
                 .build()
         )
 
+
     }
 
     fun onLogIn(view: View) {
         val emailPasswordCredentials: Credentials = Credentials.emailPassword(
-            "aruss8@illinois.edu",
-            "test123"
+            binding.username.text.toString(),
+            binding.password.text.toString()
         )
 
         taskApp.loginAsync(emailPasswordCredentials) {
+            binding.password.text.clear()
             if (it.isSuccess) {
                 user = taskApp.currentUser()
 
 
                 val intent = Intent(this, TwoFactorAuthentication::class.java)
                 startActivity(intent)
+            } else {
+                it.error.errorMessage?.let { it1 ->
+                    Snackbar.make(
+                        binding.root,
+                        it1,
+                        Snackbar.LENGTH_SHORT
+                    ).show()
+                }
             }
         }
     }
