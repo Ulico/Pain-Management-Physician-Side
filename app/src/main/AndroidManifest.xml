@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PainManagementPhysicianSide">
         <activity
+            android:name=".UserProfile"
+            android:exported="false" />
+        <activity
             android:name=".activites.PatientSummary"
             android:exported="false" />
         <activity
