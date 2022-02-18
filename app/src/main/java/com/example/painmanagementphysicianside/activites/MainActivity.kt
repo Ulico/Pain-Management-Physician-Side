@@ -26,6 +26,9 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        user = null
+        binding.password.text.clear()
+
         Realm.init(this)
         taskApp = App(
             AppConfiguration.Builder(appID)
@@ -36,13 +39,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onLogIn(view: View) {
+        if (binding.username.text.isEmpty() || binding.password.text.isEmpty()) {
+            Snackbar.make(
+                binding.root,
+                "Please enter your username and password.",
+                Snackbar.LENGTH_SHORT
+            ).show()
+            return
+        }
+
         val emailPasswordCredentials: Credentials = Credentials.emailPassword(
             binding.username.text.toString(),
             binding.password.text.toString()
         )
 
         taskApp.loginAsync(emailPasswordCredentials) {
-            binding.password.text.clear()
             if (it.isSuccess) {
                 user = taskApp.currentUser()
 
