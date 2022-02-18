@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,7 @@ import com.example.painmanagementphysicianside.adapters.PatientListAdapter
 import com.example.painmanagementphysicianside.databinding.ActivityPatientsBinding
 import com.example.painmanagementphysicianside.models.Patient
 import com.example.painmanagementphysicianside.models.Physician
+import com.google.gson.Gson
 
 class Patients : AppCompatActivity() {
     private lateinit var binding: ActivityPatientsBinding
@@ -36,13 +38,14 @@ class Patients : AppCompatActivity() {
             this, p.patients.sortedBy { pat -> pat.name.substringAfterLast(" ") }
         )
         binding.patientList.onItemClickListener =
-            AdapterView.OnItemClickListener { p0, p1, p2, p3 ->
-                startActivity(
-                    Intent(
-                        this,
-                        PatientSummary::class.java
-                    )
+            AdapterView.OnItemClickListener { _, _, position, _ ->
+                val intent = Intent(
+                    this,
+                    PatientSummary::class.java
                 )
+                val pat = binding.patientList.adapter.getItem(position) as Patient
+                intent.putExtra("PATIENT", Gson().toJson(pat))
+                startActivity(intent)
             }
 
         binding.patientEditText.addTextChangedListener(object : TextWatcher {
