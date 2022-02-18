@@ -30,12 +30,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:autofillHints="name"
-        android:hint="@string/type_patient_name" />
+        android:hint="@string/type_patient_name"
+        android:inputType="textPersonName" />
 
     <ListView
         android:id="@+id/patientList"
         android:layout_width="250dp"
-        android:layout_height="300dp"
+        android:layout_height="200dp"
         android:layout_below="@id/patientEditText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp" />
