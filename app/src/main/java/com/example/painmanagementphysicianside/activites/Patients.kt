@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import androidx.appcompat.app.AppCompatActivity
@@ -25,24 +24,26 @@ class Patients : AppCompatActivity() {
 
         val p = Physician(
             "Robert Smith", listOf(
-                Patient("Jane Doe", 63, true),
-                Patient("John Coe", 47, false),
-                Patient("Josh Foe", 64, false),
-                Patient("James Loe", 45, true),
-                Patient("Jill Doe", 34, true),
-                Patient("Jack Doe", 96, false)
+                Patient("Marshall Lawson", 63, true),
+                Patient("Shawna Bowers", 47, false),
+                Patient("Latoya Tyler", 64, false),
+                Patient("Jacquelyn Blair", 45, true),
+                Patient("Angelica Hall", 34, true),
+                Patient("Sandy Romero", 96, false),
+                Patient("Kelly Murray", 64, false),
+                Patient("Monique Baldwin", 45, true),
+                Patient("Scott Bowman", 34, true),
+                Patient("Ed Gibson", 96, false)
             )
         )
 
         binding.patientList.adapter = PatientListAdapter(
             this, p.patients.sortedBy { pat -> pat.name.substringAfterLast(" ") }
         )
+
         binding.patientList.onItemClickListener =
             AdapterView.OnItemClickListener { _, _, position, _ ->
-                val intent = Intent(
-                    this,
-                    PatientSummary::class.java
-                )
+                val intent = Intent(this, PatientSummary::class.java)
                 val pat = binding.patientList.adapter.getItem(position) as Patient
                 intent.putExtra("PATIENT", Gson().toJson(pat))
                 startActivity(intent)
@@ -56,9 +57,7 @@ class Patients : AppCompatActivity() {
             override fun afterTextChanged(text: Editable?) {
                 (binding.patientList.adapter as PatientListAdapter).updateData(
                     p.patients.filter { p ->
-                        p.name.contains(
-                            text!!, true
-                        )
+                        p.name.contains(text!!, true)
                     }
                 )
             }

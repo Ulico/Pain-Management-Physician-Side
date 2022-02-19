@@ -4,7 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserProfile">
+    tools:context=".activites.UserProfile">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav_menu" />
+
 
     <ImageView
         android:id="@+id/imageView"
@@ -15,54 +24,54 @@
         app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Full Patient Name:"
-        android:textSize="15sp"
-        android:layout_below="@+id/imageView"
         android:id="@+id/fullPatientNameText"
-        android:layout_centerHorizontal="true"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:text="Full Patient Name:"
+        android:textSize="15sp" />
 
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Provider Name:"
-        android:textSize="15sp"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/fullPatientNameText"
         android:id="@+id/providerNameText"
-        android:layout_centerHorizontal="true"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fullPatientNameText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Provider Name:"
+        android:textSize="15sp" />
 
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Primary pain location:"
-        android:textSize="15sp"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/providerNameText"
         android:id="@+id/primaryPainLocation"
-        android:layout_centerHorizontal="true"/>
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Other pain location:"
-        android:textSize="15sp"
+        android:layout_below="@+id/providerNameText"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:layout_below="@+id/primaryPainLocation"
+        android:text="Primary pain location:"
+        android:textSize="15sp" />
+
+    <TextView
         android:id="@+id/otherPainLocation"
-        android:layout_centerHorizontal="true"/>
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Other pain location:"
-        android:textSize="15sp"
+        android:layout_below="@+id/primaryPainLocation"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:layout_below="@+id/otherPainLocation"
+        android:text="Other pain location:"
+        android:textSize="15sp" />
+
+    <TextView
         android:id="@+id/otherPainLocation2"
-        android:layout_centerHorizontal="true"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/otherPainLocation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Other pain location:"
+        android:textSize="15sp" />
 
 </RelativeLayout>
