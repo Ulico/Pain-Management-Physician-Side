@@ -17,7 +17,7 @@ class UserProfile : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.navView.selectedItemId = R.id.navigationData
+        binding.navView.selectedItemId = R.id.navigationProfile
 
         patientJson = intent.getStringExtra("PATIENT")!!
         val pat: Patient = Gson().fromJson(patientJson, Patient::class.java)
@@ -28,7 +28,7 @@ class UserProfile : AppCompatActivity() {
                 R.id.navigationHome -> {
                     startActivity(Intent(this@UserProfile, Homescreen::class.java))
                 }
-                R.id.navigationProfile -> {
+                R.id.navigationData -> {
                     val intent = Intent(this@UserProfile, PatientSummary::class.java)
                     intent.putExtra("PATIENT", patientJson)
                     startActivity(intent)
