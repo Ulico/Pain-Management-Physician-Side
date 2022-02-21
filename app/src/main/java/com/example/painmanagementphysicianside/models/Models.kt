@@ -1,6 +1,11 @@
 package com.example.painmanagementphysicianside.models
 
-class Physician(val name: String, val patients: List<Patient>) {
+object User {
+
+    var name: String = ""
+    var patients: MutableList<Patient> = mutableListOf()
+
+
 }
 
 class Patient(val name: String, val age: Int, val status: Boolean) {

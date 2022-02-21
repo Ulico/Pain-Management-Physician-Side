@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.painmanagementphysicianside.adapters.PatientListAdapter
 import com.example.painmanagementphysicianside.databinding.ActivityPatientsBinding
 import com.example.painmanagementphysicianside.models.Patient
-import com.example.painmanagementphysicianside.models.Physician
 import com.example.painmanagementphysicianside.models.User
 import com.google.gson.Gson
 
