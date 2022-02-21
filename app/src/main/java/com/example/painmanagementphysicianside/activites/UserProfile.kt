@@ -19,9 +19,9 @@ class UserProfile : AppCompatActivity() {
 
         binding.navView.selectedItemId = R.id.navigationProfile
 
-        patientJson = intent.getStringExtra("PATIENT")!!
+        patientJson = intent.getStringExtra("PATIENT").toString()
         val pat: Patient = Gson().fromJson(patientJson, Patient::class.java)
-        ("Full Patient Name: " + pat.name).also { binding.fullPatientNameText.text = it }
+        "Full Patient Name: ${pat.name}".also { binding.fullPatientNameText.text = it }
 
         binding.navView.setOnItemSelectedListener { item ->
             when (item.itemId) {
