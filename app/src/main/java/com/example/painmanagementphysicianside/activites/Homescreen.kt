@@ -5,11 +5,27 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.painmanagementphysicianside.R
+import com.example.painmanagementphysicianside.models.Patient
+import com.example.painmanagementphysicianside.models.User
 
 class Homescreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homescreen)
+
+        User.name = "Robert Smith"
+        User.patients = mutableListOf(
+            Patient("Marshall Lawson", 63, true),
+            Patient("Shawna Bowers", 47, false),
+            Patient("Latoya Tyler", 64, false),
+            Patient("Jacquelyn Blair", 45, true),
+            Patient("Angelica Hall", 34, true),
+            Patient("Sandy Romero", 96, false),
+            Patient("Kelly Murray", 64, false),
+            Patient("Monique Baldwin", 45, true),
+            Patient("Scott Bowman", 34, true),
+            Patient("Ed Gibson", 96, false)
+        )
     }
 
     fun onPatients(view: View) {

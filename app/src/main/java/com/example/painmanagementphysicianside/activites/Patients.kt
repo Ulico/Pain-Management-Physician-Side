@@ -11,6 +11,7 @@ import com.example.painmanagementphysicianside.adapters.PatientListAdapter
 import com.example.painmanagementphysicianside.databinding.ActivityPatientsBinding
 import com.example.painmanagementphysicianside.models.Patient
 import com.example.painmanagementphysicianside.models.Physician
+import com.example.painmanagementphysicianside.models.User
 import com.google.gson.Gson
 
 class Patients : AppCompatActivity() {
@@ -22,23 +23,8 @@ class Patients : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val p = Physician(
-            "Robert Smith", listOf(
-                Patient("Marshall Lawson", 63, true),
-                Patient("Shawna Bowers", 47, false),
-                Patient("Latoya Tyler", 64, false),
-                Patient("Jacquelyn Blair", 45, true),
-                Patient("Angelica Hall", 34, true),
-                Patient("Sandy Romero", 96, false),
-                Patient("Kelly Murray", 64, false),
-                Patient("Monique Baldwin", 45, true),
-                Patient("Scott Bowman", 34, true),
-                Patient("Ed Gibson", 96, false)
-            )
-        )
-
         binding.patientList.adapter = PatientListAdapter(
-            this, p.patients.sortedBy { pat -> pat.name.substringAfterLast(" ") }
+            this, User.patients.sortedBy { pat -> pat.name.substringAfterLast(" ") }
         )
 
         binding.patientList.onItemClickListener =
@@ -56,7 +42,7 @@ class Patients : AppCompatActivity() {
 
             override fun afterTextChanged(text: Editable?) {
                 (binding.patientList.adapter as PatientListAdapter).updateData(
-                    p.patients.filter { p ->
+                    User.patients.filter { p ->
                         p.name.contains(text!!, true)
                     }
                 )
