@@ -40,9 +40,10 @@ class Patients : AppCompatActivity() {
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
 
             override fun afterTextChanged(text: Editable?) {
+                require(text != null)
                 (binding.patientList.adapter as PatientListAdapter).updateData(
                     User.patients.filter { p ->
-                        p.name.contains(text!!, true)
+                        p.name.contains(text, true)
                     }
                 )
             }
