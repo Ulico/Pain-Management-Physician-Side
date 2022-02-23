@@ -33,7 +33,6 @@ class Homescreen : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun onData(view: View) {}
     fun onMessages(view: View) {
         val intent = Intent(this, Messages::class.java)
         startActivity(intent)

@@ -47,21 +47,10 @@
             android:id="@+id/patientsButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:width="120dp"
+            android:width="260dp"
             android:height="120dp"
             android:onClick="onPatients"
             android:text="@string/patients" />
-
-        <Button
-            android:id="@+id/dataButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_toEndOf="@id/patientsButton"
-            android:width="120dp"
-            android:height="120dp"
-            android:onClick="onData"
-            android:text="@string/data" />
     </RelativeLayout>
 
     <RelativeLayout
