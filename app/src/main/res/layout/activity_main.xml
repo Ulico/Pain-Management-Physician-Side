@@ -22,10 +22,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
         android:autofillHints="username"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890@."
         android:ems="10"
         android:hint="@string/username"
-
-        android:inputType="textPersonName" />
+        android:inputType="textFilter" />
 
     <EditText
         android:id="@+id/password"
