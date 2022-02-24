@@ -1,10 +1,10 @@
-package com.example.painmanagementphysicianside.activites
+package com.adrianrusso.painmanagementphysicianside.activites
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.painmanagementphysicianside.R
+import com.adrianrusso.painmanagementphysicianside.R
 
 class HelpSection : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

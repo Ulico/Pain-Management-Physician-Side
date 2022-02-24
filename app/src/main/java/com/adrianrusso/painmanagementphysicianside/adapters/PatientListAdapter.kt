@@ -1,4 +1,4 @@
-package com.example.painmanagementphysicianside.adapters
+package com.adrianrusso.painmanagementphysicianside.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.painmanagementphysicianside.R
-import com.example.painmanagementphysicianside.models.Patient
+import com.adrianrusso.painmanagementphysicianside.R
+import com.adrianrusso.painmanagementphysicianside.models.Patient
 
 class PatientListAdapter(val context: Context, private var list: List<Patient>) :
     BaseAdapter() {

@@ -1,11 +1,11 @@
-package com.example.painmanagementphysicianside.activites
+package com.adrianrusso.painmanagementphysicianside.activites
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.painmanagementphysicianside.R
-import com.example.painmanagementphysicianside.databinding.ActivityUserProfileBinding
-import com.example.painmanagementphysicianside.models.Patient
+import com.adrianrusso.painmanagementphysicianside.R
+import com.adrianrusso.painmanagementphysicianside.databinding.ActivityUserProfileBinding
+import com.adrianrusso.painmanagementphysicianside.models.Patient
 import com.google.gson.Gson
 
 class UserProfile : AppCompatActivity() {

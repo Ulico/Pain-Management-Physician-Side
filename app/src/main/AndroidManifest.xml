@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.painmanagementphysicianside">
+    package="com.adrianrusso.painmanagementphysicianside">
 
     <application
         android:allowBackup="true"
@@ -12,29 +12,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PainManagementPhysicianSide">
         <activity
-            android:name=".activites.UserProfile"
+            android:name="com.adrianrusso.painmanagementphysicianside.activites.UserProfile"
             android:exported="false" />
         <activity
-            android:name=".activites.PatientSummary"
+            android:name="com.adrianrusso.painmanagementphysicianside.activites.PatientSummary"
             android:exported="false" />
         <activity
-            android:name=".activites.Patients"
+            android:name="com.adrianrusso.painmanagementphysicianside.activites.Patients"
             android:exported="false"
             android:windowSoftInputMode="adjustNothing" />
         <activity
-            android:name=".activites.Messages"
+            android:name="com.adrianrusso.painmanagementphysicianside.activites.Messages"
             android:exported="false" />
         <activity
-            android:name=".activites.HelpSection"
+            android:name="com.adrianrusso.painmanagementphysicianside.activites.HelpSection"
             android:exported="false" />
         <activity
-            android:name=".activites.Homescreen"
+            android:name="com.adrianrusso.painmanagementphysicianside.activites.Homescreen"
             android:exported="false" />
         <activity
-            android:name=".activites.TwoFactorAuthentication"
+            android:name="com.adrianrusso.painmanagementphysicianside.activites.TwoFactorAuthentication"
             android:exported="false" />
         <activity
-            android:name=".activites.MainActivity"
+            android:name="com.adrianrusso.painmanagementphysicianside.activites.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

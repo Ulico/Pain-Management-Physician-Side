@@ -1,4 +1,4 @@
-package com.example.painmanagementphysicianside
+package com.adrianrusso.painmanagementphysicianside
 
 import org.junit.Test
 

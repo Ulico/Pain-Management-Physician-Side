@@ -1,4 +1,4 @@
-package com.example.painmanagementphysicianside.models
+package com.adrianrusso.painmanagementphysicianside.models
 
 object User {
 

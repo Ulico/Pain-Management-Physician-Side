@@ -1,4 +1,4 @@
-package com.example.painmanagementphysicianside.activites
+package com.adrianrusso.painmanagementphysicianside.activites
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,10 +7,10 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.AdapterView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.painmanagementphysicianside.adapters.PatientListAdapter
-import com.example.painmanagementphysicianside.databinding.ActivityPatientsBinding
-import com.example.painmanagementphysicianside.models.Patient
-import com.example.painmanagementphysicianside.models.User
+import com.adrianrusso.painmanagementphysicianside.adapters.PatientListAdapter
+import com.adrianrusso.painmanagementphysicianside.databinding.ActivityPatientsBinding
+import com.adrianrusso.painmanagementphysicianside.models.Patient
+import com.adrianrusso.painmanagementphysicianside.models.User
 import com.google.gson.Gson
 
 class Patients : AppCompatActivity() {

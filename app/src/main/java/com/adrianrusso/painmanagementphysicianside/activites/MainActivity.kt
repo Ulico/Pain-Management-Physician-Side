@@ -1,10 +1,10 @@
-package com.example.painmanagementphysicianside.activites
+package com.adrianrusso.painmanagementphysicianside.activites
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.example.painmanagementphysicianside.databinding.ActivityMainBinding
+import com.adrianrusso.painmanagementphysicianside.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 import io.realm.Realm
 import io.realm.mongodb.App

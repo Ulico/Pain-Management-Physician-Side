@@ -1,12 +1,12 @@
-package com.example.painmanagementphysicianside.activites
+package com.adrianrusso.painmanagementphysicianside.activites
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.example.painmanagementphysicianside.R
-import com.example.painmanagementphysicianside.models.Patient
-import com.example.painmanagementphysicianside.models.User
+import com.adrianrusso.painmanagementphysicianside.R
+import com.adrianrusso.painmanagementphysicianside.models.Patient
+import com.adrianrusso.painmanagementphysicianside.models.User
 
 class Homescreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
