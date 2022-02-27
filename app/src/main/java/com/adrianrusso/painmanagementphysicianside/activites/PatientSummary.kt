@@ -26,6 +26,17 @@ class PatientSummary : AppCompatActivity() {
         "Patient: ${pat.name}".also { binding.patientNameText.text = it }
         "Age: ${pat.age}".also { binding.patientAgeText.text = it }
 
+        "Most common pain location:\n${pat.painLocations[0]}".also {
+            binding.painLocationText.text = it
+        }
+        "Most common treatment used:\n${pat.commonTreatments[0]}".also {
+            binding.commonTreatmentText.text = it
+        }
+        "Most alternative treatment used:\n${pat.alternativeTreatments[0]}".also {
+            binding.alternativeTreatmentText.text = it
+        }
+        "Notes:\n${pat.notes}".also { binding.notesString.text = it }
+
         binding.navView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigationHome -> {

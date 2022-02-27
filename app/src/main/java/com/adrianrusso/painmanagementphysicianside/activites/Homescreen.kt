@@ -5,27 +5,22 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.adrianrusso.painmanagementphysicianside.R
+import com.adrianrusso.painmanagementphysicianside.databinding.ActivityHomescreenBinding
+import com.adrianrusso.painmanagementphysicianside.databinding.ActivityMainBinding
 import com.adrianrusso.painmanagementphysicianside.models.Patient
-import com.adrianrusso.painmanagementphysicianside.models.User
+import com.adrianrusso.painmanagementphysicianside.models.AppUser
 
 class Homescreen : AppCompatActivity() {
+
+    private lateinit var binding: ActivityHomescreenBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_homescreen)
+        binding = ActivityHomescreenBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
-        User.name = "Robert Smith"
-        User.patients = mutableListOf(
-            Patient("Marshall Lawson", 63, true),
-            Patient("Shawna Bowers", 47, false),
-            Patient("Latoya Tyler", 64, false),
-            Patient("Jacquelyn Blair", 45, true),
-            Patient("Angelica Hall", 34, true),
-            Patient("Sandy Romero", 96, false),
-            Patient("Kelly Murray", 64, false),
-            Patient("Monique Baldwin", 45, true),
-            Patient("Scott Bowman", 34, true),
-            Patient("Ed Gibson", 96, false)
-        )
+        "Welcome, ${AppUser.name}".also { binding.welcomeText.text = it }
     }
 
     fun onPatients(view: View) {

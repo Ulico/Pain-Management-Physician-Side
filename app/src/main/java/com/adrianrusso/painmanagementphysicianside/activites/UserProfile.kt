@@ -23,6 +23,13 @@ class UserProfile : AppCompatActivity() {
         val pat: Patient = Gson().fromJson(patientJson, Patient::class.java)
         "Full Patient Name: ${pat.name}".also { binding.fullPatientNameText.text = it }
 
+        "Provider Name: ${pat.providerName}".also { binding.providerNameText.text = it }
+        "Primary pain location: ${pat.painLocations[0]}".also {
+            binding.primaryPainLocation.text = it
+        }
+        "Other pain location: ${pat.painLocations[1]}".also { binding.otherPainLocation.text = it }
+        "Other pain location: ${pat.painLocations[2]}".also { binding.otherPainLocation2.text = it }
+
         binding.navView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigationHome -> {

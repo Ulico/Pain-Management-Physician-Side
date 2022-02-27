@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.adrianrusso.painmanagementphysicianside.adapters.PatientListAdapter
 import com.adrianrusso.painmanagementphysicianside.databinding.ActivityPatientsBinding
 import com.adrianrusso.painmanagementphysicianside.models.Patient
-import com.adrianrusso.painmanagementphysicianside.models.User
+import com.adrianrusso.painmanagementphysicianside.models.AppUser
 import com.google.gson.Gson
 
 class Patients : AppCompatActivity() {
@@ -23,7 +23,7 @@ class Patients : AppCompatActivity() {
         setContentView(view)
 
         binding.patientList.adapter = PatientListAdapter(
-            this, User.patients.sortedBy { pat -> pat.name.substringAfterLast(" ") }
+            this, AppUser.patients.sortedBy { pat -> pat.name.substringAfterLast(" ") }
         )
 
         binding.patientList.onItemClickListener =
@@ -42,7 +42,7 @@ class Patients : AppCompatActivity() {
             override fun afterTextChanged(text: Editable?) {
                 require(text != null)
                 (binding.patientList.adapter as PatientListAdapter).updateData(
-                    User.patients.filter { p ->
+                    AppUser.patients.filter { p ->
                         p.name.contains(text, true)
                     }
                 )
