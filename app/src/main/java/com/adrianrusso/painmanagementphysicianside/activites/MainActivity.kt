@@ -145,4 +145,8 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, HelpSection::class.java)
         startActivity(intent)
     }
+
+    override fun onBackPressed() {
+        return
+    }
 }
