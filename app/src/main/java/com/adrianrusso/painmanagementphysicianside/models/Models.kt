@@ -7,6 +7,7 @@ import io.realm.mongodb.mongo.MongoClient
 import io.realm.mongodb.mongo.MongoCollection
 import io.realm.mongodb.mongo.MongoDatabase
 import org.bson.Document
+import org.bson.types.ObjectId
 import java.io.FileReader
 
 object AppUser {
@@ -33,22 +34,22 @@ object AppUser {
                 .getAsync { task ->
                     if (task.isSuccess) {
                         val result = task.get()
-                        Log.d("AppData", result.toString())
-                        val p = Gson().fromJson(result.toJson(), Patient::class.java)
-                        Log.d("AppData", p.toString())
+//                        Log.d("AppData", result.toString())
+//                        val p = Gson().fromJson(result.toJson(), Patient::class.java)
+//                        Log.d("AppData", p.toString())
                         patients.add(
-                            p
-//                            Patient(
-//                                result["name"] as String,
-//                                result["age"] as Int,
-//                                result["status"] as Boolean,
-//                                result["provider_name"] as String,
-//                                result["pain_locations"] as List<String>,
-//                                result["treatments"] as List<String>,
-//                                result["alternative_treatments"] as List<String>,
-//                                result["notes"] as String
-//
-//                            )
+
+                            Patient(
+                                result["name"] as String,
+                                result["age"] as Int,
+                                result["status"] as Boolean,
+                                result["provider_name"] as String,
+                                result["pain_locations"] as List<String>,
+                                result["treatments"] as List<String>,
+                                result["alternative_treatments"] as List<String>,
+                                result["notes"] as String
+
+                            )
                         )
                     } else {
                         Log.e("AppUser", "failed to find document with: ${task.error}")
