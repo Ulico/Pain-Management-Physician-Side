@@ -26,6 +26,8 @@ class Patients : AppCompatActivity() {
             this, AppUser.patients.sortedBy { pat -> pat.name.substringAfterLast(" ") }
         )
 
+        //(binding.patientList.adapter as PatientListAdapter).getListNames()
+
         binding.patientList.onItemClickListener =
             AdapterView.OnItemClickListener { _, _, position, _ ->
                 val intent = Intent(this, PatientSummary::class.java)

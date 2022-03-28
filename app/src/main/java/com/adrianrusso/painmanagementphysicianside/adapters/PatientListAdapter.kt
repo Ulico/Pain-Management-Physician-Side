@@ -21,6 +21,10 @@ class PatientListAdapter(val context: Context, private var list: List<Patient>) 
         return list.size
     }
 
+    fun getListNames(): List<String> {
+        return list.map { it.name }
+    }
+
     override fun getItem(position: Int): Any {
         return list[position]
     }
