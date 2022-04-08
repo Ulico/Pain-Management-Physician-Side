@@ -27,6 +27,10 @@ class Patients : AppCompatActivity() {
         )
 
         //(binding.patientList.adapter as PatientListAdapter).getListNames()
+        binding.patientGraph.settings.domStorageEnabled = true
+        binding.patientGraph.settings.javaScriptEnabled = true
+        binding.patientGraph.loadUrl("file:///android_asset/graph.html")
+        binding.patientGraph.addJavascriptInterface(WebAppInterface(this, (binding.patientList.adapter as PatientListAdapter)), "Android")
 
         binding.patientList.onItemClickListener =
             AdapterView.OnItemClickListener { _, _, position, _ ->

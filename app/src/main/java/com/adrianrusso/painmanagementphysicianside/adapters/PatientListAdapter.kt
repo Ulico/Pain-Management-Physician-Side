@@ -1,6 +1,7 @@
 package com.adrianrusso.painmanagementphysicianside.adapters
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +25,13 @@ class PatientListAdapter(val context: Context, private var list: List<Patient>) 
     fun getListNames(): List<String> {
         return list.map { it.name }
     }
+
+//    fun getNameString(): String {
+//        var toReturn = ""
+//        list.forEach { toReturn += it.name + ", " }
+//        Log.d("test", toReturn.dropLast(2))
+//        return toReturn.dropLast(2)
+//    }
 
     override fun getItem(position: Int): Any {
         return list[position]

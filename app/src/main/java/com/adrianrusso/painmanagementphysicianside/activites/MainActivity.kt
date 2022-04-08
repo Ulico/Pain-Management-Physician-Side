@@ -2,6 +2,7 @@ package com.adrianrusso.painmanagementphysicianside.activites
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.adrianrusso.painmanagementphysicianside.databinding.ActivityMainBinding
@@ -12,6 +13,10 @@ import io.realm.mongodb.App
 import io.realm.mongodb.AppConfiguration
 import io.realm.mongodb.Credentials
 import io.realm.mongodb.User
+import io.realm.mongodb.mongo.MongoClient
+import io.realm.mongodb.mongo.MongoCollection
+import io.realm.mongodb.mongo.MongoDatabase
+import org.bson.Document
 
 lateinit var taskApp: App
 const val appID = "test_app-svywj"
@@ -66,10 +71,8 @@ class MainActivity : AppCompatActivity() {
 //                    mongoClient.getDatabase("pain-management-database")!!
 //                val mongoCollection: MongoCollection<Document> =
 //                    mongoDatabase.getCollection("users-info")!!
-//                val arr = listOf("34234", "3425234")
 //                mongoCollection.insertOne(
-//                    Document("_id", user!!.id).append("name", "Robert Smith")
-//                        .append("patients", arr)
+//                    Document("_id", user!!.id.toString()).append("name", "Tester")
 //                )
 //                    .getAsync { result ->
 //                        if (result.isSuccess) {

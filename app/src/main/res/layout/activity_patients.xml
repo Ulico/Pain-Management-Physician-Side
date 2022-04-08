@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="148dp"
-        android:layout_height="170dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/logo"
         android:src="@drawable/logo" />
@@ -36,10 +36,18 @@
     <ListView
         android:id="@+id/patientList"
         android:layout_width="300dp"
-        android:layout_height="220dp"
+        android:layout_height="180dp"
         android:layout_below="@id/patientEditText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp" />
+
+    <WebView
+        android:id="@+id/patientGraph"
+        android:layout_width="270dp"
+        android:layout_height="130dp"
+        android:layout_below="@id/patientList"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
 
     <ImageButton
         android:layout_width="wrap_content"

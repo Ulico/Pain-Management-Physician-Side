@@ -66,6 +66,8 @@ object AppUser {
 }
 
 data class Patient(
+
+
     val name: String,
     val age: Int,
     val status: Boolean,
